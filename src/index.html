@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="w-full h-screen bg-[#3A3960] text-white flex items-center flex-col">
+    <h1 class="text-center bg-[#A9BFA8] text-[#3A3960] w-50 mt-4 text-lg p-3 rounded-3xl">Welcome to Quizz.it!</h1>
+    <h3 class="font-montserrat text-lg text-center p-3">Customize your Quizz</h3>
+    <form class="flex flex-col items-center justify-center">
+      <section id="categoryselect" class="bg-[#5E686D] text-center w-5/6 flex justify-between items-center rounded-lg p-3 shadow-xl font-poppins mb-4">
+        <label for="name" class="text-left text-sm font-semibold ">Your name</label>
+        <input class="text-black rounded-md focus:outline-none bg-[#A9BFA8] p-2 w-4/6" type="text" name="name"/>
+      </section>
+        <section id="categoryselect" class="bg-[#5E686D] text-center w-5/6 flex gap-2 justify-between rounded-lg p-3 shadow-xl font-poppins">
+          <label for="catalogue" class=" text-sm font-semibold">Choose Diffculty</label>
+          <select class="text-black rounded-md focus:outline-none bg-[#A9BFA8]" name="catalogue" id="catalogue">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </section>
+        <button type="submit" class="bg-green-700 px-3 py-1 rounded-lg mt-5 mb-5 font-poppins shadow-2xl" onclick="generateQuiz()">Generate quiz</button>
+    </form>
+    <footer class="flex-col justify-center items-center">
+      <p class="flex gap-2 mt-3 items-center"><a href="linkedin.com/Sumanththummahttps://www.linkedin.com/in/sumanth-thumma-a2158515b/"><img src="./assets/linkedin-02-stroke-rounded.svg" alt="linkedin"></a> <a href="https://github.com/Sumanththumma"><img src="./assets/github-stroke-rounded.svg" alt=""></a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
