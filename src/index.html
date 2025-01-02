@@ -7,12 +7,12 @@
 </head>
 <body class="w-full h-screen bg-[#3A3960] text-white flex items-center flex-col">
     <h1 class="text-center bg-[#A9BFA8] text-[#3A3960] w-50 mt-4 text-lg p-3 rounded-3xl">Welcome to Quizz</h1>
-    <div id="start-reset" class="hidden">
+    <div id="start-reset" class="">
       <h3 class="font-montserrat text-lg text-center p-3">Customize your Quiz</h3>
-    <form class="flex flex-col items-center justify-center">
-      <section id="playername" class="bg-[#5E686D] text-center w-5/6 flex justify-between items-center rounded-lg p-3 shadow-xl font-poppins mb-4">
+    <form id="form" class="flex flex-col items-center justify-center" onsubmit="generateCustomQuiz()">
+      <section id="player" class="bg-[#5E686D] text-center w-5/6 flex justify-between items-center rounded-lg p-3 shadow-xl font-poppins mb-4">
         <label for="name" class="text-left text-sm font-semibold ">Your name</label>
-        <input class="text-black rounded-md focus:outline-none bg-[#A9BFA8] p-2 w-4/6" type="text" name="name"/>
+        <input class="text-black rounded-md focus:outline-none bg-[#A9BFA8] p-2 w-4/6" id="playername" type="text" name="name" required/>
       </section>
         <section id="difficulty" class="bg-[#5E686D] text-center w-5/6 flex gap-2 justify-between rounded-lg p-3 shadow-xl font-poppins">
           <label for="catalogue" class=" text-sm font-semibold">Choose Diffculty</label>
@@ -25,22 +25,20 @@
         <section id="categoryselect" class="bg-[#5E686D] text-center w-5/6 items-center flex rounded-lg p-3 shadow-xl font-poppins mt-4 mb-4">
             <label for="category" class="text-sm font-semibold text-left ">Choose your Category</label>
             <select name="category" id="Category"  class="text-black rounded-md focus:outline-none bg-[#A9BFA8] ">
-              <option value="Math">Mathematics</option>
-              <option value="computers">Computers</option>
-              <option value="GeneralKnowledge" selected>General Knowledge</option>
-              <option value="films">Films</option>
-              <option value="Math">Anime</option>
-              <option value="VideoGames">Video Games</option>
-              <option value="Mythology">Mythology</option>
+              <option value="19">Mathematics</option>
+              <option value="18">Computers</option>
+              <option value="9" selected>General Knowledge</option>
+              <option value="11">Films</option>
+              <option value="31">Anime</option>
+              <option value="15">Video Games</option>
+              <option value="20">Mythology</option>
             </select>
         </section>
-        <button type="submit" class="bg-green-700 px-3 py-1 rounded-lg mt-5 mb-5 font-poppins shadow-2xl" onclick="generateQuiz()">Generate quiz</button>
+        <button type="submit" class="bg-green-700 px-3 py-1 rounded-lg mt-5 mb-5 font-poppins shadow-2xl">Generate quiz</button>
     </form>
     </div>
-    <div id="quizbody">
-      <div class="bg-[#A9BFA8] w-full h-full" id="maincontainer">
-        <h1 class="text-black font-bold text-2xl px-4 py-2">Q1. What does LAN stands for?</h1>
-      </div>
+    <div id="quizbox" class="w-full max-w-[720px] mt-5 px-4 font-poppins hidden">
+
     </div>
     <footer class="flex-col justify-center items-center">
       <p class="flex gap-2 mt-3 items-center"><a href="https://www.linkedin.com/in/sumanth-thumma-a2158515b/"><img src="./assets/linkedin-02-stroke-rounded.svg" alt="linkedin"></a> <a href="https://github.com/Sumanththumma"><img src="./assets/github-stroke-rounded.svg" alt=""></a></p>
