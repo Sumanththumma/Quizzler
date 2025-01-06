@@ -9,7 +9,7 @@
     <h1 class="text-center bg-[#A9BFA8] text-[#3A3960] w-50 mt-4 text-lg p-3 rounded-3xl">Welcome to Quizzler</h1>
     <div id="start-reset" class="">
       <h3 class="font-montserrat text-lg text-center p-3">Customize your Quiz</h3>
-    <form id="form" class="flex flex-col items-center justify-center" onsubmit="generateCustomQuiz()">
+    <form id="form" class="flex flex-col items-center justify-center" >
       <section id="player" class="bg-[#5E686D] text-center w-5/6 flex justify-between items-center rounded-lg p-3 shadow-xl font-poppins mb-4">
         <label for="name" class="text-left text-sm font-semibold ">Your name</label>
         <input class="text-black rounded-md focus:outline-none bg-[#A9BFA8] p-2 w-4/6" id="playername" type="text" name="name" required/>
@@ -40,29 +40,35 @@
     <div id="quizbox" class="w-full max-w-[720px] mt-5 px-4 font-poppins hidden">
       <div id="score-container">
         <div id="score" class="flex justify-between items-center bg-[#A9BFA8] mb-5 px-3 py-2 text-black text-lg font-semibold rounded-xl">
-          <h1>Sumanth</h1>
-          <p class="flex items-center">Score<span class="w-2"></span><span class="text-2xl"> 2</span></p>
+          <h1 id="name-display"></h1>
+          <p class="flex items-center">Score<span class="w-2"></span><span class="text-2xl" id="playerscore"> 0</span></p>
         </div>
       </div>
       <div id="maincontainer">
-        <div id="heading" class="flex justify-between px-4 py-2 text-black items-center bg-[#A9BFA8] font-montserrat rounded-t-sm">
-          <p>Q</p>
-          <h1 class="text-lg font-semibold">What does LAN stands for?</h1>
-          <p class="flex"><img class="invert" src="./assets/timericon.svg" alt="timer-icon">15s</p>
+        <div id="heading" class="flex justify-between px-4 py-2 gap-3 text-black items-center bg-[#A9BFA8] font-montserrat rounded-t-sm">
+          
+          <h1 id="question" class="text-lg font-semibold w-full"></h1>
+          
         </div>
         <div id="choices" class=" grid grid-cols-2 px-5 py-5 items-center gap-5 bg-[#5E686D]">
-          <button class="bg-[#FAFFC5] text-black px-1 py-0 text-lg rounded-md">local area network</button>
-          <button class="bg-[#FAFFC5] text-black px-1 py-0 text-lg rounded-md">long address note</button>
-          <button class="bg-[#FAFFC5] text-black px-1 py-0 text-lg rounded-md">liquid ammonia nitrate</button>
-          <button class="bg-[#FAFFC5] text-black px-1 py-0 text-lg rounded-md">local agent network</button>
+          <button id="option1" class="bg-[#FAFFC5] text-black px-1 py-0 text-lg rounded-md hover:opacity-45" className = "options"></button>
+          <button id="option2" class="bg-[#FAFFC5] text-black px-1 py-0 text-lg rounded-md hover:opacity-45" className = "options"></button>
+          <button id="option3" class="bg-[#FAFFC5] text-black px-1 py-0 text-lg rounded-md hover:opacity-45" className = "options"></button>
+          <button id="option4" class="bg-[#FAFFC5] text-black px-1 py-0 text-lg rounded-md hover:opacity-45" className = "options"></button>
         </div>
         <div id="navending" class="flex justify-between px-4 py-2 text-black items-center bg-[#A9BFA8] font-montserrat rounded-b-sm">
-          <p><span class="text-xl font-semibold">2 </span>/ 10</p>
-          <button class="flex">Next<img class="invert" src="./assets/next.svg" alt="next icon"></button>
+          <p><span class="text-xl font-semibold" id="qindex">0</span>/ 10</p>
+          <button id="nextbtn" class="flex hidden">Next<img class="invert hidden" src="./assets/next.svg" alt="next icon"></button>
         </div>
       </div>
     </div>
-    <footer class="flex-col justify-center items-center border-t-2 absolute bottom-5 border-gray-600">
+    <div id="game-over" class="hidden">
+      <div id="main-box" class="w-full mt-20 flex flex-col gap-10 justify-center items-center font-poppins text-2xl">
+        <p>Conratulations, </p>
+        <button class="px-4 py-3 bg-green-600 hover:shadow-xl rounded-md hover:bg-green-500 duration-200 active:bg-green-500">Play Again!</button>
+      </div>
+    </div>
+    <footer class="flex-col justify-center items-center border-t-2 absolute bottom-5 border-s-fuchsia-700">
       <p class="flex gap-2 mt-3 items-center"><a href="https://www.linkedin.com/in/sumanth-thumma-a2158515b/"><img src="./assets/linkedin-02-stroke-rounded.svg" alt="linkedin"></a> <a href="https://github.com/Sumanththumma"><img src="./assets/github-stroke-rounded.svg" alt=""></a></p>
     </footer>
     <script src="script.js"></script>
