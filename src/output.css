@@ -556,6 +556,18 @@ video {
   display: none;
 }
 
+.absolute{
+  position: absolute;
+}
+
+.bottom-0{
+  bottom: 0px;
+}
+
+.bottom-5{
+  bottom: 1.25rem;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -664,6 +676,15 @@ video {
 .rounded-t-sm{
   border-top-left-radius: 0.125rem;
   border-top-right-radius: 0.125rem;
+}
+
+.border-t-2{
+  border-top-width: 2px;
+}
+
+.border-gray-600{
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity, 1));
 }
 
 .bg-\[\#3A3960\]{
